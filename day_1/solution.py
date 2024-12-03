@@ -3,8 +3,8 @@ def main():
     with open("input.txt", "r") as file:
         lines = file.readlines()
 
-    left_list = []
-    right_list = []
+    left_list: list[int] = []
+    right_list: list[int] = []
 
     for line in lines:
         left, right = line.strip().split()

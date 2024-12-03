@@ -1,4 +1,4 @@
-def is_safe(report_str):
+def is_safe(report_str: str) -> bool:
     # Convert string of numbers to list of integers
     numbers = [int(num) for num in report_str.split()]
 
@@ -20,7 +20,7 @@ def is_safe(report_str):
 
     return True
 
-def can_be_safe(report_str):
+def can_be_safe(report_str: str) -> bool:
     # If it's already safe, no need to remove anything
     if is_safe(report_str):
         return True
@@ -45,7 +45,7 @@ def main():
 
     print("Part 1:")
     # Process each report
-    report_statuses = []
+    report_statuses: list[bool] = []
     for report in reports:
         report_statuses.append(is_safe(report))
 
